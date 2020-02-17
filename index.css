@@ -63,8 +63,7 @@
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  /* border: 2px solid rgba(55, 184, 147, 0.5); */
-  border: 2px solid rgba(255, 179, 0, 0.5);
+  /* border: 2px solid rgba(255, 179, 0, 0.5); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,8 +76,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  /* background-color: #FFB300; */
-  background-color: #ff9103;
+  /* background-color: #ff9103; */
   display: flex;
   align-items: center;
   justify-content: center;

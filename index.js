@@ -11,7 +11,23 @@ function setDocument() {
   }
 
   var documentId = document.getElementById('buttonScript').src
-  console.log(documentId.split('=')[1])
+
+  function hexToRgbA(hex){
+    var c;
+    if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+        c= hex.substring(1).split('');
+        if(c.length== 3){
+            c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+        }
+        c= '0x'+c.join('');
+        return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',1)';
+    }
+    throw new Error('Bad Hex');
+  }
+
+  var secondColor = hexToRgbA(documentId.split('=')[3]).split(',');
+  secondColor[1] = +secondColor[1] + 30;
+  secondColor[2] = +secondColor[2] + 25;
 
   var bg = document.createElement('div');
   bg.id = 'bg';
@@ -41,11 +57,13 @@ function setDocument() {
 
   var chat_choose = document.createElement('chat_choose');
   chat_choose.className = 'chat_choose';
+  chat_choose.style.backgroundColor = documentId.split('=')[3];
   chat_choose.appendChild(chat_choose_svg);
 
   var chat_ring = document.createElement('div');
   chat_ring.id = 'chat_ring';
-  chat_ring.appendChild(chat_choose)
+  chat_ring.style.border = '2px solid ' + secondColor.join();
+  chat_ring.appendChild(chat_choose);
 
   // chat list 
   var webchat_svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
@@ -75,6 +93,7 @@ function setDocument() {
 
   var webchat = document.createElement('div');
   webchat.id = 'webchat';
+  webchat.style.backgroundColor = secondColor.join();
   webchat.appendChild(wc);
   webchat.appendChild(webchat_svg);
 
@@ -97,6 +116,7 @@ function setDocument() {
 
   var whatsapp = document.createElement('div');
   whatsapp.id = 'whatsapp';
+  whatsapp.style.backgroundColor = secondColor.join();
   whatsapp.appendChild(wh);
   whatsapp.appendChild(whatsapp_svg);
 
