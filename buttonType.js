@@ -1,6 +1,5 @@
 function setDocument() {
   var documentId = document.getElementById('buttonScript').src
-  console.log('sudaa', documentId.split('=')[1]);
 
   // add fonts
   var link = document.createElement('link');
@@ -68,13 +67,13 @@ function setDocument() {
   var webchatPath2 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
   var webchatPath3 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
   webchatPath.setAttribute("d", "M16.7875 0.347694H3.19302C1.77166 0.347694 0.615234 1.50389 0.615234 2.92548V11.245C0.615234 12.6634 1.76662 13.8177 3.18386 13.8228V17.5981L8.60939 13.8228H16.7875C18.2088 13.8228 19.3652 12.6663 19.3652 11.245V2.92548C19.3652 1.50389 18.2088 0.347694 16.7875 0.347694V0.347694ZM18.2666 11.245C18.2666 12.0605 17.6031 12.7241 16.7875 12.7241H8.26469L4.28249 15.4952V12.7241H3.19302C2.3774 12.7241 1.71387 12.0605 1.71387 11.245V2.92548C1.71387 2.10974 2.3774 1.44633 3.19302 1.44633H16.7875C17.6031 1.44633 18.2666 2.10974 18.2666 2.92548V11.245Z");
-  webchatPath.setAttribute("fill", "#ff9103");
+  webchatPath.setAttribute("fill", documentId.split('=')[3]);
   webchatPath1.setAttribute("d", "M5.63354 4.22964H14.3468V5.32828H5.63354V4.22964Z");
-  webchatPath1.setAttribute("fill", "#ff9103");
+  webchatPath1.setAttribute("fill", documentId.split('=')[3]);
   webchatPath2.setAttribute("d", "M5.63354 6.57339H14.3468V7.67203H5.63354V6.57339Z");
-  webchatPath2.setAttribute("fill", "#ff9103");
+  webchatPath2.setAttribute("fill", documentId.split('=')[3]);
   webchatPath3.setAttribute("d", "M5.63354 8.91714H14.3468V10.0158H5.63354V8.91714Z");
-  webchatPath3.setAttribute("fill", "#ff9103");
+  webchatPath3.setAttribute("fill", documentId.split('=')[3]);
   webchatSvg.appendChild(webchatPath);
   webchatSvg.appendChild(webchatPath1);
   webchatSvg.appendChild(webchatPath2);
@@ -86,7 +85,7 @@ function setDocument() {
   webchat.style.alignItems = 'center';
   webchat.style.padding = '10px 0';
   webchat.style.cursor = 'pointer';
-  webchat.style.color = '#ff9103';
+  webchat.style.color = documentId.split('=')[3];
   webchat.appendChild(webchatSvg);
   webchat.appendChild(webchatText);
 
@@ -102,9 +101,9 @@ function setDocument() {
   var whatsappPath = document.createElementNS("http://www.w3.org/2000/svg", 'path');
   var whatsappPath1 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
   whatsappPath.setAttribute("d", "M17.1593 2.84073C15.3273 1.00876 12.8922 0 10.3012 0C10.3011 0 10.3004 0 10.3003 0C9.01886 0.000152588 7.77008 0.248261 6.5889 0.73761C5.40756 1.22696 4.34922 1.93451 3.443 2.84073C1.61118 4.67255 0.602419 7.10815 0.602419 9.69879C0.602419 11.2437 0.975191 12.7791 1.68152 14.147L0.0512718 18.8043C-0.0636269 19.1328 0.0177025 19.4899 0.263979 19.736C0.436251 19.9084 0.662997 20 0.896151 20C0.996096 20 1.09711 19.9832 1.19568 19.9487L5.85297 18.3186C7.22092 19.025 8.75626 19.3977 10.3012 19.3977C12.8918 19.3977 15.3273 18.3888 17.1593 16.557C18.9911 14.7252 20 12.2896 20 9.69894C20 7.10815 18.9912 4.67255 17.1593 2.84073V2.84073ZM16.3298 15.7275C14.7195 17.338 12.5784 18.2246 10.3012 18.2246C8.90808 18.2246 7.52411 17.8801 6.29883 17.2279C6.07666 17.1098 5.81406 17.0895 5.57831 17.1721L1.34705 18.653L2.82807 14.4217C2.91062 14.1856 2.89017 13.923 2.77207 13.701C2.12006 12.476 1.77536 11.0921 1.77536 9.69879C1.77536 7.42157 2.6622 5.28046 4.27246 3.6702C5.88257 2.06009 8.02338 1.17325 10.3004 1.17294H10.3012C12.5786 1.17294 14.7195 2.05978 16.3298 3.6702C17.9402 5.28046 18.8271 7.42142 18.8271 9.69879C18.8271 11.9762 17.9402 14.1173 16.3298 15.7275V15.7275Z");
-  whatsappPath.setAttribute("fill", "#ff9103");
+  whatsappPath.setAttribute("fill", documentId.split('=')[3]);
   whatsappPath1.setAttribute("d", "M13.9056 10.5652C13.4594 10.119 12.7334 10.119 12.2873 10.5652L11.7993 11.0532C10.5876 10.3929 9.60706 9.41238 8.94666 8.20068L9.43464 7.71271C9.88096 7.26654 9.88096 6.54053 9.43464 6.09436L8.11963 4.77936C7.67347 4.33319 6.94745 4.33319 6.50129 4.77936L5.44935 5.8313C4.84678 6.43387 4.81672 7.46979 5.36466 8.74832C5.84043 9.8584 6.7111 11.0785 7.81629 12.1837C8.92148 13.2889 10.1416 14.1595 11.2517 14.6353C11.8591 14.8956 12.4116 15.0255 12.8891 15.0255C13.4166 15.0255 13.8524 14.8669 14.1687 14.5506L15.2206 13.4985V13.4987C15.4368 13.2825 15.5559 12.9951 15.5559 12.6895C15.5559 12.3837 15.4368 12.0964 15.2206 11.8803L13.9056 10.5652ZM13.3392 13.7212C13.1672 13.8931 12.6384 13.9534 11.7138 13.5573C10.7376 13.1389 9.64795 12.3564 8.64576 11.3542C7.64356 10.352 6.86124 9.26254 6.44285 8.28629C6.04657 7.36176 6.10685 6.83273 6.27881 6.66077L7.31061 5.62897L8.58503 6.90353L7.97422 7.5145C7.69803 7.79068 7.63135 8.20953 7.80851 8.55682C8.61158 10.1315 9.86844 11.3884 11.4432 12.1915C11.7906 12.3686 12.2094 12.3021 12.4856 12.0258L13.0964 11.4149L14.371 12.6895L13.3392 13.7212Z");
-  whatsappPath1.setAttribute("fill", "#ff9103");
+  whatsappPath1.setAttribute("fill", documentId.split('=')[3]);
   whatsappSvg.appendChild(whatsappPath);
   whatsappSvg.appendChild(whatsappPath1);
 
@@ -114,14 +113,14 @@ function setDocument() {
   whatsapp.style.alignItems = 'center';
   whatsapp.style.margin = '5px 0 15px';
   whatsapp.style.cursor = 'pointer';
-  whatsapp.style.color = '#ff9103';
+  whatsapp.style.color = documentId.split('=')[3];
   whatsapp.appendChild(whatsappSvg);
   whatsapp.appendChild(whatsappText);
 
   var choosingBlock = document.createElement('div');
   choosingBlock.style.alignItems = 'center';
   choosingBlock.style.borderRadius = '5px';
-  choosingBlock.style.border = '1px solid #ff9103';
+  choosingBlock.style.border = '1px solid ' + documentId.split('=')[3];
   choosingBlock.style.boxSizing = 'border-box';
   choosingBlock.style.padding = '5px';
   choosingBlock.style.marginTop = '5px';
@@ -139,6 +138,7 @@ function setDocument() {
   mainBtn.style.display = 'flex';
   mainBtn.style.alignItems = 'center';
   mainBtn.style.justifyContent = 'center';
+  mainBtn.style.backgroundColor = documentId.split('=')[3];
   mainBtn.style.cursor = 'pointer';
 
   mainBtn.appendChild(mainText);
